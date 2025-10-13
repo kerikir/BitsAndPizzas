@@ -2,7 +2,8 @@
 
 <!-- Coordinator Layout - координирующий макет (Frame Layout),
      для координации анимаций между разными представлениями,
-     позволяет поведению одного представления влиять на поведение другого представления.-->
+     позволяет поведению одного представления влиять на поведение другого представления.
+     Только для вложенной прокрутки. -->
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -30,5 +31,17 @@
             app:layout_scrollFlags="scroll|enterAlways" />
 
     </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Nested Scroll View - представление вложенной прокрутки для прокрутки содержимого макета,
+         может иметь только одного потомка.-->
+    <!-- Layout Behavior - указывает поведение представления.
+         Appbar Scrolling View Behavior - размещено под макетом панели приложений и
+         перемещает представления при прокрутке. -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
