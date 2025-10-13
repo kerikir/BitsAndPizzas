@@ -20,11 +20,14 @@
         android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
 
         <!-- Material Toolbar - панель инструментов -->
+        <!-- Layout Scroll Flags - указывает, как панель инструментов должна реагировать на прокрутку.
+             Scroll - представление прокручивается за верхний край экрана при прокрутке вверх.
+             Enter Always - быстро прокручивается вниз до своей исходной позиции. -->
         <com.google.android.material.appbar.MaterialToolbar
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:id="@+id/toolbar"
-            style="@style/Widget.MaterialComponents.Toolbar.Primary" />
+            app:layout_scrollFlags="scroll|enterAlways" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
