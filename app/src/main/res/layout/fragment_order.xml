@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout
+<!-- Coordinator Layout - координирующий макет (Frame Layout),
+     для координации анимаций между разными представлениями,
+     позволяет поведению одного представления влиять на поведение другого представления.-->
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".OrderFragment">
 
-    <com.google.android.material.appbar.MaterialToolbar
+    <!-- App Bar Layout - для работы с панелями приложений (Linear Layout),
+         для возможности анимации панели инструментов-->
+    <!-- Theme - стиль, применяемый ко всем предсавлениям макета панели приложений -->
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:id="@+id/toolbar"
-        style="@style/Widget.MaterialComponents.Toolbar.Primary" />
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
 
-</FrameLayout>
+        <!-- Material Toolbar - панель инструментов -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/toolbar"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
