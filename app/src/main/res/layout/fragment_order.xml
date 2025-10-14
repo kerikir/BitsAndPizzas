@@ -26,10 +26,22 @@
              должна реагировать на прокрутку.
              Scroll - представление прокручивается за верхний край экрана при прокрутке вверх.
              Exit Until Collapsed - сворачивается пока есть возможность для уменьшения -->
+        <!-- Content Scrim - установка цвета фона свернутой панели инструментов -->
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="?attr/colorPrimary">
+
+            <!-- Image View - изображение в сворачиваемой панели инструментов (Collapsing Toolbar). -->
+            <!-- Layout Collapse Mode - режим сворачивания.
+                 Parallax - параллакасная анимация, чтобы скорость прокрутки отличалась. -->
+            <ImageView
+                android:src="@drawable/restaurant"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"/>
 
             <!-- Material Toolbar - панель инструментов -->
             <!-- Layout Collapse Mode - режим сворачивания.
