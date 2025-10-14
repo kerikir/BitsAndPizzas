@@ -20,16 +20,27 @@
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
 
-        <!-- Material Toolbar - панель инструментов -->
-        <!-- Layout Scroll Flags - указывает, как панель инструментов должна реагировать на прокрутку.
+        <!-- Collapsing Toolbar Layout - сворачиваемая панель инструментов.
+             Layout Height - максимальная высота сворачиваемой панели инструментов -->
+        <!-- Layout Scroll Flags - указывает, как сворачиваемая панель инструментов
+             должна реагировать на прокрутку.
              Scroll - представление прокручивается за верхний край экрана при прокрутке вверх.
-             Enter Always - быстро прокручивается вниз до своей исходной позиции. -->
-        <com.google.android.material.appbar.MaterialToolbar
+             Exit Until Collapsed - сворачивается пока есть возможность для уменьшения -->
+        <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:id="@+id/toolbar"
-            app:layout_scrollFlags="scroll|enterAlways" />
+            android:layout_height="300dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
+            <!-- Material Toolbar - панель инструментов -->
+            <!-- Layout Collapse Mode - режим сворачивания.
+                 Pin - элементы, которые находятся на панели инструментов остаются на экране. -->
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:id="@+id/toolbar"
+                app:layout_collapseMode="pin" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
     <!-- Nested Scroll View - представление вложенной прокрутки для прокрутки содержимого макета,
