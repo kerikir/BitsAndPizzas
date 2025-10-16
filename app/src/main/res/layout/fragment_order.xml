@@ -65,56 +65,76 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <!-- Radio Group - группа переключателей с выбором одного элемента (Linear Layout). -->
-        <RadioGroup
-            android:id="@+id/pizza_group"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content">
-
-            <!-- Radio Button - для определения каждого переключателя в группе (Compound Button). -->
-            <!-- Compound Button - вид кнопки, которая имеет два состояния. -->
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/radio_divolo"
-                android:text="@string/diavolo" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/radio_funghi"
-                android:text="@string/funghi" />
-
-        </RadioGroup>
-
-
-        <!-- Chip Group - группа плашек, группа представлений
-                          для размещения нескольких плашек со сходным значением.  -->
-        <com.google.android.material.chip.ChipGroup
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="vertical">
 
-            <!-- Chip - плашка для выбора (Compound Button). -->
-            <!-- Style - для изменения цвета при выборе. -->
-            <!-- Entry - плашка ввода. -->
-            <!-- Filter - плашка фильтрации данных. -->
-            <!-- Action - плашка действия. -->
-            <com.google.android.material.chip.Chip
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/parmesan"
-                android:text="@string/parmesan"
-                style="@style/Widget.MaterialComponents.Chip.Choice" />
+                android:text="@string/question_type_of_pizza" />
 
-            <com.google.android.material.chip.Chip
+
+            <!-- Radio Group - группа переключателей с выбором одного элемента (Linear Layout). -->
+            <RadioGroup
+                android:id="@+id/pizza_group"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+
+                <!-- Radio Button - для определения каждого переключателя в группе (Compound Button). -->
+                <!-- Compound Button - вид кнопки, которая имеет два состояния. -->
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radio_divolo"
+                    android:text="@string/diavolo" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radio_funghi"
+                    android:text="@string/funghi" />
+
+            </RadioGroup>
+
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/chili_oil"
-                android:text="@string/chili_oil"
-                style="@style/Widget.MaterialComponents.Chip.Choice" />
+                android:text="@string/choose_extras" />
 
-        </com.google.android.material.chip.ChipGroup>
 
+            <!-- Chip Group - группа плашек, группа представлений
+                              для размещения нескольких плашек со сходным значением.  -->
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <!-- Chip - плашка для выбора (Compound Button). -->
+                <!-- Style - для изменения цвета при выборе. -->
+                <!-- Entry - плашка ввода. -->
+                <!-- Filter - плашка фильтрации данных. -->
+                <!-- Action - плашка действия. -->
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/parmesan"
+                    android:text="@string/parmesan"
+                    style="@style/Widget.MaterialComponents.Chip.Choice" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chili_oil"
+                    android:text="@string/chili_oil"
+                    style="@style/Widget.MaterialComponents.Chip.Choice" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+        </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
 

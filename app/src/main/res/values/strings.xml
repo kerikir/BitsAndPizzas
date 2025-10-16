@@ -6,4 +6,6 @@
     <string name="funghi">Funghi</string>
     <string name="parmesan">Parmesan</string>
     <string name="chili_oil">Chili oil</string>
+    <string name="question_type_of_pizza">Which type of pizza would you like?</string>
+    <string name="choose_extras">Please choose any extras:</string>
 </resources>
