@@ -143,6 +143,7 @@
     <!-- Src - значок в FAB -->
     <!-- Layout Anchor - к какому представлению прикрепить FAB -->
     <!-- Layout Anchor Gravity - расположение FAB в представлении -->
+    <!-- Кнопка не перемещается при прокрутке (всегда справа снизу). -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
