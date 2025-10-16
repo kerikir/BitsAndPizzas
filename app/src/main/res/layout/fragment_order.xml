@@ -71,6 +71,8 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content">
 
+            <!-- Radio Button - для определения каждого переключателя в группе (Compound Button). -->
+            <!-- Compound Button - вид кнопки, которая имеет два состояния. -->
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
