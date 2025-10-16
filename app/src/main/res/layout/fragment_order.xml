@@ -121,6 +121,8 @@
     <!-- Floating Action Button - плавающая кнопка действий, для привлечения внимения. -->
     <!-- FAB используется внутри координирующего макета. -->
     <!-- Src - значок в FAB -->
+    <!-- Layout Anchor - к какому представлению прикрепить FAB -->
+    <!-- Layout Anchor Gravity - расположение FAB в представлении -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
