@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
 
-        <!-- Collapsing Toolbar Layout - сворачиваемая панель инструментов.
+        <!-- Collapsing Toolbar Layout - сворачиваемая панель инструментов (Frame Layout).
              Layout Height - максимальная высота сворачиваемой панели инструментов -->
         <!-- Layout Scroll Flags - указывает, как сворачиваемая панель инструментов
              должна реагировать на прокрутку.
@@ -56,7 +56,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <!-- Nested Scroll View - представление вложенной прокрутки для прокрутки содержимого макета,
-         может иметь только одного потомка.-->
+         может иметь только одного потомка (Frame Layout).-->
     <!-- Layout Behavior - указывает поведение представления.
          Appbar Scrolling View Behavior - размещено под макетом панели приложений и
          перемещает представления при прокрутке. -->
@@ -65,10 +65,25 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="This is the order fragment"/>
+        <!-- Radio Group - группа переключателей с выбором одного элемента (Linear Layout). -->
+        <RadioGroup
+            android:id="@+id/pizza_group"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_divolo"
+                android:text="@string/diavolo" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_funghi"
+                android:text="@string/funghi" />
+
+        </RadioGroup>
 
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
