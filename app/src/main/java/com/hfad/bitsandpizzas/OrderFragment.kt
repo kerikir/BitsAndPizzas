@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class OrderFragment : Fragment() {
@@ -20,6 +21,11 @@ class OrderFragment : Fragment() {
         val toolbar = view.findViewById<MaterialToolbar>(R.id.toolbar)
         // Использование панели инструментов как панели приложения
         (activity as AppCompatActivity).setSupportActionBar(toolbar)
+
+        val fab = view.findViewById<FloatingActionButton>(R.id.fab)
+        fab.setOnClickListener {
+            
+        }
 
         return view
     }
