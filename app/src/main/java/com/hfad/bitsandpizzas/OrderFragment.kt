@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -24,7 +25,17 @@ class OrderFragment : Fragment() {
 
         val fab = view.findViewById<FloatingActionButton>(R.id.fab)
         fab.setOnClickListener {
-            
+
+            val pizzaGroup = view.findViewById<RadioGroup>(R.id.pizza_group)
+            // Получение id выбранного переключателя
+            val pizzaType = pizzaGroup.checkedRadioButtonId
+
+            // Пицца не выбрана
+            if (pizzaType == -1) {
+
+            } else {
+                
+            }
         }
 
         return view
