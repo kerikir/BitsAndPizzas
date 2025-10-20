@@ -12,15 +12,23 @@ import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.chip.Chip
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
-
+// Импортируем класс связывания
+import com.hfad.bitsandpizzas.databinding.FragmentOrderBinding
 
 class OrderFragment : Fragment() {
 
+    private var _binding: FragmentOrderBinding? = null
+    private val binding get() = _binding!!
+
+    /** Первый доступ к представлениям фрагмента.
+     *  Активности требуется доступ к макету фрагмента. */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_order, container, false)
+
+        // Получаем объект Fragment Order Binding связанный с макетом фрагмента
+        _binding = FragmentOrderBinding.inflate(inflater, container, false)
+        val view = binding.root
 
         val toolbar = view.findViewById<MaterialToolbar>(R.id.toolbar)
         // Использование панели инструментов как панели приложения
@@ -59,5 +67,13 @@ class OrderFragment : Fragment() {
         }
 
         return view
+    }
+
+
+    /** Иерархия фрагмента готовится к уничтожению.
+     *  Макет фрагмента становится ненужным для активности. */
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
