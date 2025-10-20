@@ -30,16 +30,13 @@ class OrderFragment : Fragment() {
         _binding = FragmentOrderBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        val toolbar = view.findViewById<MaterialToolbar>(R.id.toolbar)
         // Использование панели инструментов как панели приложения
-        (activity as AppCompatActivity).setSupportActionBar(toolbar)
+        (activity as AppCompatActivity).setSupportActionBar(binding.toolbar)
 
-        val fab = view.findViewById<FloatingActionButton>(R.id.fab)
-        fab.setOnClickListener {
+        binding.fab.setOnClickListener {
 
-            val pizzaGroup = view.findViewById<RadioGroup>(R.id.pizza_group)
             // Получение id выбранного переключателя
-            val pizzaType = pizzaGroup.checkedRadioButtonId
+            val pizzaType = binding.pizzaGroup.checkedRadioButtonId
 
             // Пицца не выбрана
             if (pizzaType == -1) {
@@ -53,16 +50,14 @@ class OrderFragment : Fragment() {
                     else -> "Funghi pizza"
                 }
 
-                val parmesan = view.findViewById<Chip>(R.id.parmesan)
                 // Выбрана плашка
-                text += if (parmesan.isChecked) ", extra parmesan" else ""
-                val chilioil = view.findViewById<Chip>(R.id.chili_oil)
-                text += if (chilioil.isChecked) ", extra chili oil" else ""
+                text += if (binding.parmesan.isChecked) ", extra parmesan" else ""
+                text += if (binding.chiliOil.isChecked) ", extra chili oil" else ""
 
                 /* Сообщение Snackbar
                    Принимает: представление (инициирующее появление Snackbar), текст (CharSequence),
                    промежуток времени */
-                Snackbar.make(fab, text, Snackbar.LENGTH_LONG).show()
+                Snackbar.make(binding.fab, text, Snackbar.LENGTH_LONG).show()
             }
         }
 
@@ -74,6 +69,7 @@ class OrderFragment : Fragment() {
      *  Макет фрагмента становится ненужным для активности. */
     override fun onDestroyView() {
         super.onDestroyView()
+        // Нельзя обращаться к представлениям
         _binding = null
     }
 }
