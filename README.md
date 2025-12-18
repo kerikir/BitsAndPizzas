@@ -146,3 +146,10 @@
 
 # Приложение
 ## Скриншоты
+<img width="350" src="https://github.com/user-attachments/assets/802cbe9e-c636-4b93-9339-bc9afa335850" />
+</br>
+<img width="350" src="https://github.com/user-attachments/assets/365d72db-3147-4bfb-b0e2-a514e02ad17b" />
+</br>
+<img width="350" src="https://github.com/user-attachments/assets/a5b8a6c1-656f-46ef-b8dc-31d7289a8771" />
+</br>
+<img width="350" src="https://github.com/user-attachments/assets/a4235d14-a1f3-4fc2-8ba8-ea7a6692485c" />
